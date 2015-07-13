@@ -1,5 +1,5 @@
 <% render '_layout', title: start_date.strftime("%b %Y") do %>
-    <section id="intro" class="feature">
+    <section id="intro" class="feature" xmlns="http://www.w3.org/1999/html">
         <div class="row logo">
             <div class="large-12 columns">
                 <a href="http://www.thoughtworks.com" target="_blank"
@@ -11,10 +11,10 @@
                 <h6>an open forum for geeks to connect, discuss &amp; learn latest ideas, technologies and trends in software development</h6>
 
                 <% if @item[:subheader] %>
-                    <h5 class="subheader"><%= @item[:subheader] %></h5>
+                    <h5 class="subheader"><b><b><%= @item[:subheader] %></b></h5>
                 <% end %>
                 <% if @item[:subnote] %>
-                    <div class="subnote"><%= @item[:subnote] %></div>
+                    <div class="subnote"><font color="green"><%= @item[:subnote] %></font></div>
                 <% end %>
             </div>
         </div>
@@ -94,8 +94,7 @@
                         <h4><strike>Present</strike></h4>
                     </a>
                     <p>
-                        presentations not yet open <br />
-                        <small>(please check out in a few days)</small>
+                        presentations closed <br />
                     </p>
                 <% end %>
             </div>
