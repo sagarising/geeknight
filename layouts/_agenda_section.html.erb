@@ -18,18 +18,17 @@
                  data--200-bottom="transform:rotateX(0) scale(1);opacity:1">
                 <p><%= agenda[:title] %></p>
                 <% if agenda[:subtitle] %>
-                    <p><small><%= agenda[:subtitle] %></small></p>
+                    <p align="justify"><small><%= agenda[:subtitle] %></small></p>
                 <% end %>
                 <% if agenda[:image] %>
                     <p><img src="img/speaker/<%= agenda[:image] %>" alt="<%= agenda[:speaker] %>" /></p>
                 <% end %>
-                <% if agenda[:speaker] %>
+                <% if agenda[:speakers] %>
                     <p><small>By:
-                    <% if agenda[:profile] %>
-                    <a href="<%= agenda[:profile] %>" rel="nofollow" target="_blank"><%= agenda[:speaker] %></a>
-                    <% else %>
-                        <%= agenda[:speaker] %>
-                    <% end %>
+                        <% agenda[:speakers].each_with_index do |speaker, i| %>
+                            <a href="<%= speaker[:profile] %>" rel="nofollow" target="_blank"><%= speaker[:name] %></a>
+                            <%= ' &bull; ' if i != agenda[:speakers].length - 1 %>
+                        <% end %>
                     </small></p>
                 <% end %>
                 <% if agenda[:resources] %>
