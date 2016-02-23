@@ -1,6 +1,5 @@
 # Geek Night Pune
 
-<<<<<<< HEAD
 An open forum for geeks to connect, discuss &amp; learn latest ideas, technologies and trends in software development
 
 ## Quick Start & Auto Deployment
@@ -16,12 +15,6 @@ We're using [nanoc](//nanoc.ws) for static site generation. Jekyll/Octopress are
 * Make sure you have RVM installed
 * Clone this repo
 * Run `bundle install`
-=======
-an open forum for geeks to connect, discuss &amp; learn latest ideas, technologies and trends in software development
-
-# Development
-
-Using [nanoc](//nanoc.ws) for static site generation. Jekyll/Octopress are hard-coded for blogging, while Nanoc is much simpler, doesn't take any assumptions and allows to build whatever type of content (not just blogs).
 
 To start developing,
 
@@ -30,7 +23,6 @@ To start developing,
 * Worry only about the `generator` folder
 * `cd generator` and do `bundle install`. You'll need RVM + Ruby 2.0
 * Make changes (see below folder structure). Mostly you'll be dealing with `generator/content`
->>>>>>> gh-pages
 * Run `nanoc` to compile the website
 * Run `nanoc view` to start a server and browse to `localhost:3000`
 
