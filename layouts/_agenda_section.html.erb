@@ -28,7 +28,8 @@
                         <% agenda[:speakers].each_with_index do |speaker, i| %>
                             <a href="<%= speaker[:profile] %>" rel="nofollow" target="_blank"><%= speaker[:name] %></a>
                             <%= ' &bull; ' if i != agenda[:speakers].length - 1 %>
-                        <% end %>
+                      <% if speaker[:bio] %> <p align="justify"><i><%= speaker[:bio] %></i></p> <% end %>
+                      <% end %>
                     </small></p>
                 <% end %>
                 <% if agenda[:resources] %>
